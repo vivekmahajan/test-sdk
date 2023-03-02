@@ -1,0 +1,76 @@
+{
+  "ABIRoot": {
+    "kind": "Root",
+    "name": "TopLevel",
+    "printedName": "TopLevel",
+    "children": [
+      {
+        "kind": "Import",
+        "name": "Foundation",
+        "printedName": "Foundation",
+        "declKind": "Import",
+        "moduleName": "HCHotels",
+        "declAttributes": [
+          "RawDocComment"
+        ]
+      },
+      {
+        "kind": "TypeDecl",
+        "name": "HCHotels",
+        "printedName": "HCHotels",
+        "children": [
+          {
+            "kind": "Constructor",
+            "name": "init",
+            "printedName": "init()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "HCHotels",
+                "printedName": "HCHotels.HCHotels",
+                "usr": "s:8HCHotelsAAC"
+              }
+            ],
+            "declKind": "Constructor",
+            "usr": "s:8HCHotelsAACABycfc",
+            "mangledName": "$s8HCHotelsAACABycfc",
+            "moduleName": "HCHotels",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "init_kind": "Designated"
+          },
+          {
+            "kind": "Function",
+            "name": "helloWorld",
+            "printedName": "helloWorld()",
+            "children": [
+              {
+                "kind": "TypeNominal",
+                "name": "Void",
+                "printedName": "()"
+              }
+            ],
+            "declKind": "Func",
+            "usr": "s:8HCHotelsAAC10helloWorldyyF",
+            "mangledName": "$s8HCHotelsAAC10helloWorldyyF",
+            "moduleName": "HCHotels",
+            "declAttributes": [
+              "AccessControl"
+            ],
+            "funcSelfKind": "NonMutating"
+          }
+        ],
+        "declKind": "Class",
+        "usr": "s:8HCHotelsAAC",
+        "mangledName": "$s8HCHotelsAAC",
+        "moduleName": "HCHotels",
+        "declAttributes": [
+          "AccessControl"
+        ]
+      }
+    ],
+    "json_format_version": 8
+  },
+  "ConstValues": []
+}
