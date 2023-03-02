@@ -1,16 +1,16 @@
 name: Create Release
 
 # Create XCFramework when a version is tagged
-# on:
-#   push:
-#     tags:
-#       - "*"
+on:
+  push:
+    tags:
+      - "*"
 
 
 # Just for testing
-on:
-  push:
-    branches: ["master"]
+# on:
+#   push:
+#     branches: ["master"]
 
 jobs:
   create_release:
@@ -24,7 +24,6 @@ jobs:
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository
       - name: Create binary
         run: bash ${GITHUB_WORKSPACE}/build_xcframework.sh
-#        run: touch HCHotels.xcframework
         
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v3
@@ -37,7 +36,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: "vivekmahajan/test-sdk"
-          token: "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"
+          token: "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"
           path: remoteRepo
       - name: Commit files
         run: |
@@ -50,5 +49,5 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           repository: "vivekmahajan/test-sdk"
-          github_token: "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" #TODO remove
-          branch: master3
+          github_token: "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" #TODO remove
+          branch: main
