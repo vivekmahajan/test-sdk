@@ -1,0 +1,23 @@
+name: Create Release
+
+# Create XCFramework when a version is tagged
+# on:
+#   push:
+#     tags:
+#       - "*"
+
+
+# Just for testing
+on:
+  push:
+    branches: ["main"]
+
+jobs:
+  create_release:
+    name: Create Release
+    runs-on: macos-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Create binary
+        run: build_xcframework.sh
