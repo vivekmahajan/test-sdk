@@ -1,16 +1,16 @@
 name: Create Release
 
 # Create XCFramework when a version is tagged
-on:
-  push:
-    tags:
-      - "*"
+# on:
+#   push:
+#     tags:
+#       - "*"
 
 
 # Just for testing
-# on:
-#   push:
-#     branches: ["master"]
+on:
+  push:
+    branches: ["master"]
 
 jobs:
   create_release:
@@ -21,3 +21,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: Create binary
         run: bash ${GITHUB_WORKSPACE}/build_xcframework.sh
+        
+      - name: 'Upload Artifact'
+        uses: actions/upload-artifact@v3
+        with:
+          name: HCHotels.xcframework
+          path: ${GITHUB_WORKSPACE}/HCHotels.xcframework
+          retention-days: 1
