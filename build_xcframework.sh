@@ -15,4 +15,4 @@ xcodebuild archive \
 xcodebuild -create-xcframework \
   -framework archives/ios_devices.xcarchive/Products/Library/Frameworks/HCHotels.framework \
   -framework archives/ios_simulators.xcarchive/Products/Library/Frameworks/HCHotels.framework \
-  -output dist/HCHotels.xcframework
+  -output HCHotels.xcframework

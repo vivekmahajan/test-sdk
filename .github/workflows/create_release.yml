@@ -6,6 +6,7 @@ name: Create Release
 #     tags:
 #       - "*"
 
+
 # Just for testing
 on:
   push:
@@ -20,10 +21,10 @@ jobs:
       - uses: actions/checkout@v2
       - name: Create binary
         run: bash ${GITHUB_WORKSPACE}/build_xcframework.sh
-
-      - name: "Upload Artifact"
+        
+      - name: 'Upload Artifact'
         uses: actions/upload-artifact@v3
         with:
           name: HCHotels.xcframework
-          path: dist/HCHotels.xcframework
+          path: HCHotels.xcframework
           retention-days: 1
