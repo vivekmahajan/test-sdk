@@ -36,7 +36,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: "vivekmahajan/test-sdk"
-          token: "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"
+          token: "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"
           path: remoteRepo
       - name: Commit files
         run: |
@@ -49,5 +49,6 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           repository: "vivekmahajan/test-sdk"
-          github_token: "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" #TODO remove
+          github_token: "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" #TODO remove
+          force_with_lease: true
           branch: main
