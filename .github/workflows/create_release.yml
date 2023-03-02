@@ -41,5 +41,6 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
+          repository: "https://github.com/vivekmahajan/test-sdk.git"
           github_token: "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" #TODO remove
           branch: master
