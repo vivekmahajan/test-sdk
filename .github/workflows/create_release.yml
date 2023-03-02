@@ -23,7 +23,8 @@ jobs:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository
       - name: Create binary
-        run: bash ${GITHUB_WORKSPACE}/build_xcframework.sh
+#         run: bash ${GITHUB_WORKSPACE}/build_xcframework.sh
+        run: touch HCHotels.xcframework
         
       - name: 'Upload Artifact'
         uses: actions/upload-artifact@v3
@@ -41,6 +42,6 @@ jobs:
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
-          repository: "vivekmahajan/test-sdk.git"
+          repository: "vivekmahajan/test-sdk"
           github_token: "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" #TODO remove
           branch: master
