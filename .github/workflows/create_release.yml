@@ -53,4 +53,4 @@ jobs:
           github_token: "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" #TODO remove
           force: true
           tags: true
-          branch: main
+          branch: main2
