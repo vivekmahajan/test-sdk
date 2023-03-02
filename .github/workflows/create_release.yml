@@ -36,7 +36,7 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: "vivekmahajan/test-sdk"
-          token: "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"
+          token: "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"
           path: remoteRepo
       - name: Commit files
         run: |
@@ -45,12 +45,12 @@ jobs:
           git add HCHotels.xcframework
           git tag -d ${{github.ref_name}}
           git tag ${{github.ref_name}}
-          git commit -a -m "Version ${{github.ref_name}}"
+          git commit -m "Version ${{github.ref_name}}"
       - name: Push changes
         uses: ad-m/github-push-action@master
         with:
           repository: "vivekmahajan/test-sdk"
-          github_token: "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" #TODO remove
+          github_token: "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" #TODO remove
           force: true
           tags: true
           branch: main
