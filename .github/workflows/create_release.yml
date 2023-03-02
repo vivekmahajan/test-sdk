@@ -20,4 +20,4 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - name: Create binary
-        run: build_xcframework.sh
+        run: bash ${GITHUB_WORKSPACE}/build_xcframework.sh
