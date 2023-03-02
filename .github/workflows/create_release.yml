@@ -10,7 +10,7 @@ name: Create Release
 # Just for testing
 on:
   push:
-    branches: ["main"]
+    branches: ["master"]
 
 jobs:
   create_release:
