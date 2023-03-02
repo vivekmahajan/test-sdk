@@ -36,11 +36,12 @@ jobs:
         uses: actions/checkout@v3
         with:
           repository: "vivekmahajan/test-sdk"
-          token: "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"
+          token: "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"
           path: remoteRepo
       - name: Commit files
         run: |
-          mv ${GITHUB_WORKSPACE}/HCHotels.xcframework ${GITHUB_WORKSPACE}/remoteRepo/test-sdk
+          mkdir ${GITHUB_WORKSPACE}/remoteRepo/test-sdk/HCHotels.xcframework
+          mv -R ${GITHUB_WORKSPACE}/HCHotels.xcframework/* ${GITHUB_WORKSPACE}/remoteRepo/test-sdk/HCHotels.xcframework
           cd remoteRepo/test-sdk
           git config --local user.email "hc-bot@hopper.com"
           git config --local user.name "github-actions[bot]"
@@ -52,7 +53,7 @@ jobs:
         uses: ad-m/github-push-action@master
         with:
           repository: "vivekmahajan/test-sdk"
-          github_token: "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" #TODO remove
+          github_token: "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" #TODO remove
           force: true
           tags: true
           branch: main2
