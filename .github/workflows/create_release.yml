@@ -1,16 +1,16 @@
 name: Create Release
 
 # Create XCFramework when a version is tagged
-# on:
-#   push:
-#     tags:
-#       - "*"
+on:
+  push:
+    tags:
+      - "*"
 
 
 # Just for testing
-on:
-  push:
-    branches: ["master"]
+# on:
+#   push:
+#     branches: ["master"]
 
 jobs:
   create_release:
