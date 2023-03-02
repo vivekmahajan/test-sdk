@@ -26,5 +26,5 @@ jobs:
         uses: actions/upload-artifact@v3
         with:
           name: HCHotels.xcframework
-          path: ${GITHUB_WORKSPACE}/HCHotels.xcframework
+          path: HCHotels.xcframework
           retention-days: 1
