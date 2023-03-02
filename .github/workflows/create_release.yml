@@ -19,6 +19,9 @@ jobs:
 
     steps:
       - uses: actions/checkout@v2
+        with:
+          persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
+          fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository
       - name: Create binary
         run: bash ${GITHUB_WORKSPACE}/build_xcframework.sh
         
@@ -28,3 +31,15 @@ jobs:
           name: HCHotels.xcframework
           path: HCHotels.xcframework
           retention-days: 1
+      - name: Commit files
+        run: |
+          git config --local user.email "hc-bot@hopper.com"
+          git config --local user.name "github-actions[bot]"
+          git add HCHotels.xcframework
+          git commit -m "Added HCHotels.xcframework"
+          git tag -a ${{github.ref_name}} -m "Version ${{github.ref_name}}"
+      - name: Push changes
+        uses: ad-m/github-push-action@master
+        with:
+          github_token: "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" #TODO remove
+          branch: master
