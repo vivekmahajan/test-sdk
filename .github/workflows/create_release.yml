@@ -51,4 +51,4 @@ jobs:
         with:
           repository: "vivekmahajan/test-sdk"
           github_token: "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" #TODO remove
-          branch: master
+          branch: master2
