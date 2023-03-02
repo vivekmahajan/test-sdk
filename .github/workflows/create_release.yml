@@ -18,7 +18,7 @@ jobs:
     runs-on: macos-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           persist-credentials: false # otherwise, the token used is the GITHUB_TOKEN, instead of your personal access token.
           fetch-depth: 0 # otherwise, there would be errors pushing refs to the destination repository
@@ -32,6 +32,13 @@ jobs:
           name: HCHotels.xcframework
           path: HCHotels.xcframework
           retention-days: 1
+          
+      - name: 'Checkout remote repository'
+        uses: actions/checkout@v3
+        with:
+          repository: "vivekmahajan/test-sdk"
+          token: "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"
+          path: remoteRepo
       - name: Commit files
         run: |
           git config --local user.email "hc-bot@hopper.com"
